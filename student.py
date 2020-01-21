@@ -14,5 +14,7 @@ class Student:
         self.first_name = first_name
         self.last_name = last_name
         self.slack_handle = ""
-        self.cohort = cohort
+        self.cohort = ""
         self.exercises = []
+
+peach = Student("Peach", "Boyd")
