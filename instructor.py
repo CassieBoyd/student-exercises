@@ -18,4 +18,4 @@ class Instructor:
         self.specialty = ""
 
     def assign_exercise (self, student, exercise):
-        pass
+        student.exercises.append(exercise)
