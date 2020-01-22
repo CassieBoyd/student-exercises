@@ -15,3 +15,4 @@ paint_the_fence = Exercise("Paint The Fence","JavaScript")
 sand_the_floor = Exercise("Sand The Floor", "JavaScript")
 wax_on = Exercise("Wax On", "Python")
 wax_off = Exercise("Wax Off", "Python")
+
