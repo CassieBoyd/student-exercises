@@ -17,5 +17,5 @@ class Instructor:
         self.cohort = ""
         self.specialty = ""
 
-    def assign_exercise (self, student, exercise):
-        student.exercises.append(exercise)
+    def assign_exercise (self, student, new_exercise):
+        student.exercises.append(new_exercise)
