@@ -46,3 +46,21 @@ nariyoshi_miyagi = Instructor("Nariyoshi", "Miyagi", "Mr.Miyagi", "Day Cohort Mi
 john_kreese = Instructor("John", "Kreese", "NoMercy", "Night Cohort Cobra Kai", "Sweep The Leg")
 
 frank_n_furter = Instructor("Frank", "Furter","Sw3377ransv3s7173", "Day Cohort 98", "The Time Warp")
+
+nariyoshi_miyagi.assign_exercise(daniel_larusso, paint_the_fence)
+nariyoshi_miyagi.assign_exercise(daniel_larusso, paint_the_house)
+print(daniel_larusso.exercises[0].name)
+print(daniel_larusso.exercises[1].name)
+
+john_kreese.assign_exercise(johhny_lawrence, wax_on)
+john_kreese.assign_exercise(johhny_lawrence, wax_off)
+print(johhny_lawrence.exercises[0].name)
+print(johhny_lawrence.exercises[1].name)
+
+
+for student in day_cohort_98.students:
+    frank_n_furter.assign_exercise(student, wax_on)
+    frank_n_furter.assign_exercise(student, sand_the_floor)
+
+for exercise in janet_doe.exercises:
+    print()
