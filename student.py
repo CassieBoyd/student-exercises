@@ -9,12 +9,14 @@ The student's cohort
 The collection of exercises that the student is currently working on
 """
 
+# Student class with positional arguments for first_name, last_name, slack_handle and cohort. Exercises are set as an empty list. 
 class Student:
-    def __init__ (self, first_name, last_name)
+    def __init__(self, first_name, last_name, slack_handle, cohort):
         self.first_name = first_name
         self.last_name = last_name
-        self.slack_handle = ""
-        self.cohort = ""
+        self.slack_handle = slack_handle
+        self.cohort = cohort
         self.exercises = []
 
-peach = Student("Peach", "Boyd")
+peach = Student("Peach", "Boyd", "PeachyKeen", 842)
+print(peach.slack_handle)

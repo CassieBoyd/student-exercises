@@ -1,5 +1,6 @@
 from exercise import Exercise
 from cohort import Cohort
+from student import Student
 
 """
 Once you have defined all of your custom types, go to main.py, import the classes you need, and implement the following logic.
@@ -16,3 +17,4 @@ sand_the_floor = Exercise("Sand The Floor", "JavaScript")
 wax_on = Exercise("Wax On", "Python")
 wax_off = Exercise("Wax Off", "Python")
 
+print(peach)
