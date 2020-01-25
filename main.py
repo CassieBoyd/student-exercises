@@ -17,4 +17,6 @@ sand_the_floor = Exercise("Sand The Floor", "JavaScript")
 wax_on = Exercise("Wax On", "Python")
 wax_off = Exercise("Wax Off", "Python")
 
-print(peach)
+day_cohort_38 = Cohort("Day Cohort 38")
+cobra_kai = Cohort("Night Cohort Cobra Kai")
+miyagi_dojo = Cohort("Day Cohort Miyagi Dojo")

@@ -18,12 +18,21 @@ class Student:
         self.cohort = cohort
         self.exercises = []
 
-# peach = Student("Peach", "Boyd", "PeachyKeen", 842)
+peach = Student("Peach", "Boyd", "PeachyKeen", 842)
 # print(peach.slack_handle)
 
-# for...in loop sets prop and value as variables for the properties and values on those properties in the Student object. It then loops through the peach object using __dict__ and .items(). __dict__ accesses all properties and values on an object. The items() method returns a view object. The view object contains the key-value pairs of the dictionary, as tuples in a list. The view object will reflect any changes made to the dictionary. prop and value are assigned to the tuple pairs allowing us to put them in a print statement making them more readable.
+# for...in loop sets prop and value as variables for the properties and values on those properties in the Student object. It then loops through the peach object using __dict__ and .items(). __dict__ accesses all properties and values on an object and returns them as a dictionary. The items() method returns a view object. The view object contains the key-value pairs of the dictionary, as tuples in a list. The view object will reflect any changes made to the dictionary. prop and value are assigned to the tuple pairs allowing us to put them in a print statement making them more readable.
 
 # for prop, value in peach.__dict__.items():
 #     print(f'{prop}: {value}\n')
 
 # print(peach.__dict__)
+# print("\n\n")
+# peach_dict = peach.__dict__
+# for key in peach_dict:
+#     print(key, peach_dict[key])
+# print("\n\n")
+# for key, value in peach_dict.items():
+    # ("first_name", "Peach")
+    # print(key, value)
+

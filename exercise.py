@@ -5,6 +5,7 @@ Name of exercise
 Language of exercise (JavaScript, Python, CSharp, etc.)
 """
 
+# Exercise class takes name and language as positional arguments.
 class Exercise:
     def __init__(self, name, language):
         self.name = name
