@@ -11,8 +11,10 @@ The instructor's specialty (e.g. dad jokes, excitement, dancing, etc.)
 A method to assign an exercise to a student
 """
 
+# Instructor inherits from parent class NSSPerson. All positional arguments including inherited ones are listed after self.
 class Instructor(NSSPerson):
-    def __init__ (self, first_name,last_name, slack_handle, cohort, specialty):
+    def __init__ (self, first_name, last_name, slack_handle, cohort, specialty):
+        # super() is called and its init method is called to pass in the arguments. Argument order needs to match with child init
         super().__init__(first_name, last_name, cohort, slack_handle)
         self.specialty = specialty
 
