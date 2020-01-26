@@ -47,7 +47,7 @@ nariyoshi_miyagi = Instructor("Nariyoshi", "Miyagi", "Mr.Miyagi", "Day Cohort Mi
 
 john_kreese = Instructor("John", "Kreese", "NoMercy", "Night Cohort Cobra Kai", "Sweep The Leg")
 
-frank_n_furter = Instructor("Frank", "Furter","Sw3377ransv3s7173", "Day Cohort 98", "The Time Warp")
+frank_n_furter = Instructor("Frank", "Furter","Sw337_7ransv3s7173", "Day Cohort 98", "The Time Warp")
 
 # Instructors assigning exercises 
 nariyoshi_miyagi.assign_exercise(daniel_larusso, paint_the_fence)
@@ -70,3 +70,7 @@ for exercise in janet_doe.exercises:
 
 for exercise in john_doe.exercises:
     print("John,", exercise.name)
+
+print(frank_n_furter.first_name)
+print(frank_n_furter.specialty)
+print(janet_doe.first_name)
