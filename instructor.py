@@ -1,3 +1,5 @@
+from nssperson import NSSPerson
+
 """
 You must define a type for representing an instructor in code.
 
@@ -9,12 +11,9 @@ The instructor's specialty (e.g. dad jokes, excitement, dancing, etc.)
 A method to assign an exercise to a student
 """
 
-class Instructor:
+class Instructor(NSSPerson):
     def __init__ (self, first_name,last_name, slack_handle, cohort, specialty):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.slack_handle = slack_handle
-        self.cohort = cohort
+        super().__init__(first_name, last_name, cohort, slack_handle)
         self.specialty = specialty
 
 # Method on Instructor object takes student and new_exercise as positional arguments to append the exercises property on a student instance with a new_exercise

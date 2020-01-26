@@ -70,3 +70,5 @@ for exercise in janet_doe.exercises:
 
 for exercise in john_doe.exercises:
     print("John,", exercise.name)
+
+print(frank_n_furter.first_name)
