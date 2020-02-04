@@ -1,6 +1,6 @@
 import sqlite3
 from student import Student
-
+from cohort import Cohort
 
 class StudentExerciseReports():
 
@@ -47,8 +47,30 @@ class StudentExerciseReports():
 # Now when you run the fetchall() method, you will end up with a list of Student objects instead of a list of tuples. This means that you can access those properties when displaying them.
             for student in all_students:
                 print(student)
+            
+def all_cohorts(self):
 
+        """Retrieve all cohort names"""
 
+        with sqlite3.connect(self.db_path) as conn:
+            conn.row_factory = lambda cursor, row: Cohort(row[1], row[2], row[3], row[5])
+            db_cursor = conn.cursor()
+
+            db_cursor.execute("""
+            select s.Id,
+                s.first_name,
+                s.last_name,
+                s.slack_handle,
+                s.cohort_id,
+                c.name
+            from Student s
+            join Cohort c on s.cohort_id = c.Id
+            order by s.cohort_id
+            """)
+            all_students = db_cursor.fetchall()
+
+            for student in all_students:
+                print(student)
 
 reports = StudentExerciseReports()
 reports.all_students()
