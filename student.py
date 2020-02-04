@@ -10,6 +10,22 @@ The student's cohort
 The collection of exercises that the student is currently working on
 """
 
+# Now you have a simple class that you can use to generate a new object, with contextual properties, for interacting with student data. You would create a new instance like so.
+
+# student = Student('Bart', 'Simpson', '@bart', 'Cohort 8')
+# print(f'{student.first_name} {student.last_name} is in {student.cohort}')
+
+# Output
+# > "Bart Simpson is in Cohort 8"
+# class Student():
+
+#     def __init__(self, first, last, handle, cohort):
+#         self.first_name = first
+#         self.last_name = last
+#         self.slack_handle = handle
+#         self.cohort = cohort
+
+
 # Student class with positional arguments for first_name, last_name, slack_handle and cohort. Exercises are set as an empty list. 
 class Student(NSSPerson):
     def __init__(self, first_name, last_name, slack_handle, cohort):
