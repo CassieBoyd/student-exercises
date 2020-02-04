@@ -31,6 +31,12 @@ class Student(NSSPerson):
     def __init__(self, first_name, last_name, slack_handle, cohort):
         super().__init__(first_name, last_name, slack_handle, cohort)
         self.exercises = []
+    # def __str__(self):
+    #     return f'{self.first_name} {self.last_name} is in {self.cohort}'
+
+# Provides a default string representation of a student.
+    def __repr__(self):
+        return f'{self.first_name} {self.last_name} is in {self.cohort}'
 
 # peach = Student("Peach", "Boyd", "PeachyKeen", 842)
 # print(peach.slack_handle)
@@ -50,3 +56,5 @@ class Student(NSSPerson):
     # ("first_name", "Peach")
     # print(key, value)
 
+if __name__ == "__main__":
+    print("Student is running as Main")

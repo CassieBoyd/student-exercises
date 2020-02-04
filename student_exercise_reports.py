@@ -12,15 +12,17 @@ class StudentExerciseReports():
     # The sqlite3 package has a row_factory property on the connection object where you can specify the instructions for the conversion of row of data -> Student instance with your own function.
 
 # The function assigned to the row_factory property must take two arguments - the cursor, and the current row of data. It must return something. In this case, it will return a new instance of student.
-    def create_student(self, cursor, row):
-        return Student(row[1], row[2], row[3], row[5])
+    # def create_student(self, cursor, row):
+    #     return Student(row[1], row[2], row[3], row[5])
+
+    # lambda cursor, row: Student(row[1], row[2], row[3], row[5])
 
     def all_students(self):
 
         """Retrieve all students with the cohort name"""
 
         with sqlite3.connect(self.db_path) as conn:
-            conn.row_factory = self.create_student
+            conn.row_factory = lambda cursor, row: Student(row[1], row[2], row[3], row[5])
             db_cursor = conn.cursor()
 
             db_cursor.execute("""
@@ -44,7 +46,7 @@ class StudentExerciseReports():
 
 # Now when you run the fetchall() method, you will end up with a list of Student objects instead of a list of tuples. This means that you can access those properties when displaying them.
             for student in all_students:
-                print(f'{student.first_name} {student.last_name} is in {student.cohort}')
+                print(student)
 
 
 
